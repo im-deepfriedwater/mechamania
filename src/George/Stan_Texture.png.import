@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Stan_Texture.png-c08c7b322aaf49025f106bd4fb6d50fd.stex"
+path="res://.import/Stan_Texture.png-98ae58960ef3bf1f4e386eea56799ea2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/George/Stan_Texture.png"
-dest_files=[ "res://.import/Stan_Texture.png-c08c7b322aaf49025f106bd4fb6d50fd.stex" ]
+source_file="res://src/george/Stan_Texture.png"
+dest_files=[ "res://.import/Stan_Texture.png-98ae58960ef3bf1f4e386eea56799ea2.stex" ]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/George_Texture.png-bcb52d0613b47291a76175f0616d288f.s3tc.stex"
-path.etc2="res://.import/George_Texture.png-bcb52d0613b47291a76175f0616d288f.etc2.stex"
+path.s3tc="res://.import/George_Texture.png-450c64817f67cf0257a981677677d807.s3tc.stex"
+path.etc2="res://.import/George_Texture.png-450c64817f67cf0257a981677677d807.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://src/George/George_Texture.png"
-dest_files=[ "res://.import/George_Texture.png-bcb52d0613b47291a76175f0616d288f.s3tc.stex", "res://.import/George_Texture.png-bcb52d0613b47291a76175f0616d288f.etc2.stex" ]
+source_file="res://src/george/George_Texture.png"
+dest_files=[ "res://.import/George_Texture.png-450c64817f67cf0257a981677677d807.s3tc.stex", "res://.import/George_Texture.png-450c64817f67cf0257a981677677d807.etc2.stex" ]
 
 [params]
 

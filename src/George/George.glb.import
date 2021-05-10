@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/George.glb-6ef12706ade9c2f7922f43135a15aceb.scn"
+path="res://.import/George.glb-c890bdf99e169b24b9bc104fcf2b3353.scn"
 
 [deps]
 
-source_file="res://src/George/George.glb"
-dest_files=[ "res://.import/George.glb-6ef12706ade9c2f7922f43135a15aceb.scn" ]
+source_file="res://src/george/George.glb"
+dest_files=[ "res://.import/George.glb-c890bdf99e169b24b9bc104fcf2b3353.scn" ]
 
 [params]
 
