@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Mike.obj-0423cadeae2fc84e661993e155363a47.mesh"
+
+[deps]
+
+files=[ "res://.import/Mike.obj-0423cadeae2fc84e661993e155363a47.mesh" ]
+
+source_file="res://art/imports/Animated Mech Pack - March 2021-20210502T000741Z-001/Animated Mech Pack - March 2021/OBJ/Mike.obj"
+dest_files=[ "res://.import/Mike.obj-0423cadeae2fc84e661993e155363a47.mesh", "res://.import/Mike.obj-0423cadeae2fc84e661993e155363a47.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
