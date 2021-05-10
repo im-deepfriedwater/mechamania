@@ -6,52 +6,57 @@
 [sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 2 )
 
-[sub_resource type="AnimationNodeBlend3" id=7]
+[sub_resource type="AnimationNodeBlend3" id=2]
 
-[sub_resource type="AnimationNodeAnimation" id=8]
+[sub_resource type="AnimationNodeAnimation" id=3]
 animation = "Falling"
 
-[sub_resource type="AnimationNodeBlend3" id=3]
-
-[sub_resource type="AnimationNodeAnimation" id=2]
-animation = "Idle"
-
-[sub_resource type="AnimationNodeAnimation" id=9]
-animation = "TrimmedJump"
-
-[sub_resource type="AnimationNodeAnimation" id=10]
-animation = "Landing"
-
-[sub_resource type="AnimationNodeBlend2" id=11]
-
-[sub_resource type="AnimationNodeAnimation" id=4]
-animation = "Run"
+[sub_resource type="AnimationNodeBlend3" id=4]
 
 [sub_resource type="AnimationNodeAnimation" id=5]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "TrimmedJump"
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "Landing"
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "Run"
+
+[sub_resource type="AnimationNodeTransition" id=10]
+input_count = 2
+input_0/name = "grounded"
+input_0/auto_advance = false
+input_1/name = "airboune"
+input_1/auto_advance = false
+
+[sub_resource type="AnimationNodeAnimation" id=11]
 animation = "Walk"
 
-[sub_resource type="AnimationNodeBlendTree" id=6]
-graph_offset = Vector2( -606.5, 94.375 )
-nodes/AirbourneBlend3/node = SubResource( 7 )
+[sub_resource type="AnimationNodeBlendTree" id=12]
+graph_offset = Vector2( -219.813, -7.9987 )
+nodes/AirbourneBlend3/node = SubResource( 2 )
 nodes/AirbourneBlend3/position = Vector2( -130, 310 )
-nodes/FallingAnimation/node = SubResource( 8 )
+nodes/FallingAnimation/node = SubResource( 3 )
 nodes/FallingAnimation/position = Vector2( -370, 470 )
-nodes/GroundBlend3/node = SubResource( 3 )
+nodes/GroundBlend3/node = SubResource( 4 )
 nodes/GroundBlend3/position = Vector2( -140, 100 )
-nodes/IdleAnimation/node = SubResource( 2 )
+nodes/IdleAnimation/node = SubResource( 5 )
 nodes/IdleAnimation/position = Vector2( -390, -10 )
-nodes/JumpAnimation/node = SubResource( 9 )
+nodes/JumpAnimation/node = SubResource( 6 )
 nodes/JumpAnimation/position = Vector2( -360, 600 )
-nodes/LandingAnimation/node = SubResource( 10 )
+nodes/LandingAnimation/node = SubResource( 7 )
 nodes/LandingAnimation/position = Vector2( -370, 350 )
-nodes/MovementBlend2/node = SubResource( 11 )
-nodes/MovementBlend2/position = Vector2( 140, 160 )
-nodes/RunAnimation/node = SubResource( 4 )
+nodes/RunAnimation/node = SubResource( 9 )
 nodes/RunAnimation/position = Vector2( -390, 210 )
-nodes/WalkAnimation/node = SubResource( 5 )
+nodes/Transition/node = SubResource( 10 )
+nodes/Transition/position = Vector2( 190, 170 )
+nodes/WalkAnimation/node = SubResource( 11 )
 nodes/WalkAnimation/position = Vector2( -390, 100 )
 nodes/output/position = Vector2( 460, 190 )
-node_connections = [ "output", 0, "MovementBlend2", "GroundBlend3", 0, "IdleAnimation", "GroundBlend3", 1, "WalkAnimation", "GroundBlend3", 2, "RunAnimation", "AirbourneBlend3", 0, "LandingAnimation", "AirbourneBlend3", 1, "FallingAnimation", "AirbourneBlend3", 2, "JumpAnimation", "MovementBlend2", 0, "GroundBlend3", "MovementBlend2", 1, "AirbourneBlend3" ]
+node_connections = [ "output", 0, "Transition", "AirbourneBlend3", 0, "LandingAnimation", "AirbourneBlend3", 1, "FallingAnimation", "AirbourneBlend3", 2, "JumpAnimation", "GroundBlend3", 0, "IdleAnimation", "GroundBlend3", 1, "WalkAnimation", "GroundBlend3", 2, "RunAnimation", "Transition", 0, "GroundBlend3", "Transition", 1, "AirbourneBlend3" ]
 
 [node name="George" instance=ExtResource( 1 )]
 
@@ -59,9 +64,9 @@ node_connections = [ "output", 0, "MovementBlend2", "GroundBlend3", 0, "IdleAnim
 material/0 = SubResource( 1 )
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="2"]
-tree_root = SubResource( 6 )
+tree_root = SubResource( 12 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/AirbourneBlend3/blend_amount = -1.0
 parameters/GroundBlend3/blend_amount = 1.0
-parameters/MovementBlend2/blend_amount = 1.0
+parameters/Transition/current = 0
